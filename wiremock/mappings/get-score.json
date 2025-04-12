@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPattern": "/score\\?cpf=12345678900"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "score": 620
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
