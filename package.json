@@ -1,0 +1,19 @@
+{
+  "name": "process-flow-orchestrator",
+  "version": "1.0.0",
+  "description": "Using Langchain to orchestrate process flow",
+  "license": "ISC",
+  "author": "henrique-neves",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.44",
+    "@langchain/openai": "^0.5.5",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "langchain": "^0.3.21"
+  }
+}
