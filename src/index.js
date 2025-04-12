@@ -1,16 +1,23 @@
-import { ChatOpenAI } from "@langchain/openai";
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import 'dotenv/config';
+import { creditAnalysisAgent } from "./agents/creditAnalysisAgent.js";
 
-const model = new ChatOpenAI({ model: "gpt-4o-mini" });
+const main = async () => {
+  const input = {
+    cpf: "12345678900",
+    idade: 30,
+    renda: 5000,
+    parcelas: 48,
+    valorParcela: 1200,
+  };
 
-const messages = [
-    new SystemMessage("Translate the following from English into Italian"),
-    new HumanMessage("Hello world!"),
-  ];
-  
-const response = await model.invoke(messages);
+  console.log("🔍 Rodando orquestração...");
 
+  const result = await creditAnalysisAgent(input);
 
+  console.log("✅ Resultado da análise:");
+  console.log(result);
+};
 
-console.log(response.content);
+main().catch((err) => {
+  console.error("❌ Erro na execução do orquestrador:", err);
+});

@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPattern": "/restrictions\\?cpf=12345678900"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "restrictions": []
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

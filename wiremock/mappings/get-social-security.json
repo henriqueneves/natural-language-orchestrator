@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPattern": "/social-security\\?cpf=12345678900"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "death": false,
+            "retirement": false
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

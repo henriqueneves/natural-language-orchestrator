@@ -1,19 +1,22 @@
 {
-  "name": "process-flow-orchestrator",
+  "name": "credit-analysis-orchestrator",
   "version": "1.0.0",
-  "description": "Using Langchain to orchestrate process flow",
+  "description": "Using Langchain to orchestrate a credit analysis process flow using OpenAI.",
   "license": "ISC",
   "author": "henrique-neves",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@langchain/core": "^0.3.44",
+    "@langchain/langgraph": "^0.2.63",
     "@langchain/openai": "^0.5.5",
     "axios": "^1.8.4",
     "dotenv": "^16.5.0",
-    "langchain": "^0.3.21"
+    "js-yaml": "^4.1.0",
+    "langchain": "^0.3.21",
+    "zod": "^3.24.2"
   }
 }

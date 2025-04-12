@@ -1,7 +1,0 @@
-- A proposta deve ser rejeitada se a idade do pretendente for inferior a 18 anos.
-- A proposta deve ser rejeitada se a idade do pretendente somada ao prazo do financiamento for igual ou superior a 75 anos.
-- A proposta deve ser rejeitada se o score de crédito, consultado externamente, for inferior a 500.
-- A proposta deve ser rejeitada se o comprometimento de renda ultrapassar 30% da renda bruta, considerando parcelas futuras e dívidas existentes.
-- A proposta deve ser rejeitada se houver qualquer restrição legal no CPF, de acordo com os bureaus de crédito.
-- A proposta deve ser rejeitada se constar óbito vinculado ao CPF do pretendente.
-- A proposta será aprovada apenas se nenhuma das condições de rejeição for atendida.
