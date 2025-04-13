@@ -34,7 +34,15 @@ export async function creditAnalysisAgent(input) {
         { configurable: { thread_id: "42" } },
     );
 
-    console.log(
-        agentFinalState.messages[agentFinalState.messages.length - 1].content,
-    );
+    if (process.env.DEBUG === "true") {
+        console.log("\n🧠 Conversa completa com o agente:\n");
+
+        agentFinalState.messages.forEach((msg, index) => {
+            const role = msg.getType();
+            console.log(`🔹 [${index + 1}] ${role.toUpperCase()}:\n${JSON.stringify(msg)}\n`);
+          });
+    }
+
+    return agentFinalState.messages[agentFinalState.messages.length - 1].content;
+
 }

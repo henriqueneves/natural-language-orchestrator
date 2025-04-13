@@ -7,9 +7,7 @@ export const getRestrictionsTool = tool(
     const response = await fetch(`http://localhost:8080/restrictions?cpf=${cpf}`);
     const data = await response.json();
 
-    return {
-      score: data.score
-    };
+    return data;
   },
   {
     name: "get_restrictions",

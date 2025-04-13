@@ -6,8 +6,8 @@
     "response": {
         "status": 200,
         "jsonBody": {
-            "death": false,
-            "retirement": false
+            "deceased": false,
+            "retired": false
         },
         "headers": {
             "Content-Type": "application/json"

@@ -7,9 +7,7 @@ export const getSocialSecurityTool = tool(
     const response = await fetch(`http://localhost:8080/social-security?cpf=${cpf}`);
     const data = await response.json();
 
-    return {
-      score: data.score
-    };
+    return data;
   },
   {
     name: "get_social_security_data",
