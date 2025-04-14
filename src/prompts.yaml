@@ -14,6 +14,7 @@ credit_analysis: |
   Sempre todas as regras devem ser validadas, mesmo quando uma regra anterior já tenha sido rejeitada.
   Sempre que uma regra for atendida, inclua-a na lista "approvedRules".
   Sempre que uma regra não for atendida, inclua-a na lista "rejectedRules" e defina "result" como "rejected".
-  Se todas as regras forem atendidas, defina o "result" como "approved".
+  Se, e apenas se, todas as regras forem atendidas, defina o "result" como "approved".
   Sempre inclua explicações significativas em "humanAnswer".
   Não retorne nada fora do objeto JSON.
+  Por fim, re-valide sua resposta para garatir que as regras foram seguidas.

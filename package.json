@@ -7,7 +7,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "@langchain/core": "^0.3.44",
@@ -18,5 +18,8 @@
     "js-yaml": "^4.1.0",
     "langchain": "^0.3.21",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

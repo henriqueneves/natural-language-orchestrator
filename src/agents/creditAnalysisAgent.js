@@ -4,6 +4,7 @@ import { tools } from "../tools/index.js";
 import { MemorySaver } from "@langchain/langgraph";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
+import 'dotenv/config';
 
 export async function creditAnalysisAgent(input) {
     const systemPrompt = getPrompt("credit_analysis");
@@ -43,6 +44,6 @@ export async function creditAnalysisAgent(input) {
           });
     }
 
-    return agentFinalState.messages[agentFinalState.messages.length - 1].content;
+    return JSON.parse(agentFinalState.messages[agentFinalState.messages.length - 1].content);
 
 }
