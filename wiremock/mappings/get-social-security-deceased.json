@@ -1,13 +1,13 @@
 {
-    "priority": 2,
+    "priority": 1,
     "request": {
         "method": "GET",
-        "urlPattern": "/social-security\\?cpf=\\d+"
+        "urlPattern": "/social-security\\?cpf=12345678900"
     },
     "response": {
         "status": 200,
         "jsonBody": {
-            "deceased": false,
+            "deceased": true,
             "retired": false
         },
         "headers": {

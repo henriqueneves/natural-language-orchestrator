@@ -1,12 +1,15 @@
 {
+    "priority": 1,
     "request": {
         "method": "GET",
-        "urlPattern": "/restrictions\\?cpf=12345678900"
+        "urlPattern": "/restrictions\\?cpf=33333333333"
     },
     "response": {
         "status": 200,
         "jsonBody": {
-            "restrictions": []
+            "restrictions": [
+                "Deve 3 parcelas para a companhia de crédito."
+            ]
         },
         "headers": {
             "Content-Type": "application/json"

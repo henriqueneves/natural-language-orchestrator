@@ -7,12 +7,12 @@ import { createReactAgent } from "@langchain/langgraph/prebuilt";
 import 'dotenv/config';
 
 export async function creditAnalysisAgent(input) {
-    const systemPrompt = getPrompt("credit_analysis");
+    const systemPrompt = getPrompt("credit_analysis_imperative");
 
     const model = new ChatOpenAI(
         {
             temperature: 0,
-            model: "gpt-4o-mini"
+            model: "gpt-4.1"
         }
     ).bindTools(tools);
 
@@ -42,6 +42,6 @@ export async function creditAnalysisAgent(input) {
           });
     }
 
-    return JSON.parse(agentFinalState.messages[agentFinalState.messages.length - 1].content);
+    return JSON.parse(agentFinalState.messages[agentFinalState.messages.length - 1].content);;
 
 }

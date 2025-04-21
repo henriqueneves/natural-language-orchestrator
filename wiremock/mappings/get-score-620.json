@@ -1,14 +1,14 @@
 {
     "priority": 2,
     "request": {
+
         "method": "GET",
-        "urlPattern": "/social-security\\?cpf=\\d+"
+        "urlPattern": "/score\\?cpf=\\d+"
     },
     "response": {
         "status": 200,
         "jsonBody": {
-            "deceased": false,
-            "retired": false
+            "score": 620
         },
         "headers": {
             "Content-Type": "application/json"

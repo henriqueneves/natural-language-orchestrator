@@ -10,11 +10,12 @@ credit_analysis_imperative: |
 
   Em cada execução, receba um objeto JSON com os dados do solicitante e aplique integralmente todas as regras acima. Após a avaliação, retorne estritamente um objeto JSON estruturado conforme abaixo:
   - "resultado": "aprovado" ou "rejeitado".
-  - "respostaHumana": explicação clara, objetiva e detalhada sobre a decisão tomada.
-  - "regrasAprovadas": array contendo as descrições das regras cumpridas.
-  - "regrasRejeitadas": array contendo as descrições das regras não cumpridas.
+  - "justificativa": explicação clara, objetiva e detalhada sobre a decisão tomada.
+  - "regrasAprovadas": array contendo as descrições de todas as regras cumpridas.
+  - "regrasRejeitadas": array contendo as descrições de todas as regras não cumpridas.
 
-  Sempre valide todas as regras independentemente do resultado de regras anteriores. Classifique como "aprovado" somente se todas as regras forem cumpridas integralmente; caso contrário, classifique como "rejeitado".
+  Sempre validate todas as regras, mesmo quando alguma já tenha resultado na rejeição da proposta. 
+  Classifique como "aprovado" somente se todas as regras forem cumpridas integralmente; caso contrário, classifique como "rejeitado".
   
   Reveja minuciosamente sua resposta antes de retorná-la, assegurando que todas as regras tenham sido corretamente aplicadas conforme instruído.
   
@@ -31,10 +32,10 @@ credit_analysis_declarative: |
   Cada solicitação é recebida através de um objeto JSON com os dados pertinentes. O resultado será fornecido exclusivamente como objeto JSON estruturado conforme especificado:
 
   - "resultado": indica "aprovado" se todas as condições forem cumpridas ou "rejeitado" caso contrário.
-  - "respostaHumana": explica objetivamente e detalhadamente o motivo da decisão.
+  - "justificativa": explica objetivamente e detalhadamente o motivo da decisão.
   - "regrasAprovadas": array listando as condições satisfeitas.
   - "regrasRejeitadas": array listando as condições não satisfeitas.
 
-  Todas as condições são automaticamente avaliadas para cada solicitação. A aprovação ocorre exclusivamente quando todas as condições são integralmente cumpridas. Do contrário, ocorre a rejeição.
+  Todas as condições são avaliadas sempre, independentemente do resultado de regras anteriores. A aprovação ocorre exclusivamente quando todas as condições são integralmente cumpridas. Do contrário, ocorre a rejeição.
 
   A validação final é realizada antes da emissão do resultado para garantir precisão e integridade na análise.

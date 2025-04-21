@@ -1,12 +1,13 @@
 {
+    "priority": 2,
     "request": {
         "method": "GET",
-        "urlPattern": "/score\\?cpf=12345678900"
+        "urlPattern": "/restrictions\\?cpf=\\d+"
     },
     "response": {
         "status": 200,
         "jsonBody": {
-            "score": 620
+            "restrictions": []
         },
         "headers": {
             "Content-Type": "application/json"
