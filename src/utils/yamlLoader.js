@@ -8,11 +8,6 @@ function loadYamlFile(filePath) {
     return yaml.load(fileContent);
 }
 
-export function getRules(key = "credit_analysis") {
-    const rules = loadYamlFile("./src/rules.yaml");
-    return rules[key];
-}
-
 export function getPrompt(key = "credit_analysis") {
     const prompts = loadYamlFile("./src/prompts.yaml");
     return prompts[key];

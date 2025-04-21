@@ -1,4 +1,4 @@
-import { getPrompt, getRules } from "../utils/yamlLoader.js";
+import { getPrompt } from "../utils/yamlLoader.js";
 import { ChatOpenAI } from "@langchain/openai";
 import { tools } from "../tools/index.js";
 import { MemorySaver } from "@langchain/langgraph";
@@ -8,7 +8,6 @@ import 'dotenv/config';
 
 export async function creditAnalysisAgent(input) {
     const systemPrompt = getPrompt("credit_analysis");
-    const creditRules = getRules("credit_analysis");
 
     const model = new ChatOpenAI(
         {
@@ -28,7 +27,6 @@ export async function creditAnalysisAgent(input) {
         {
             messages: [
                 new SystemMessage(systemPrompt),
-                new SystemMessage(creditRules),
                 new HumanMessage(JSON.stringify(input, null, 2)),
             ]
         },
