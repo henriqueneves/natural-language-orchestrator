@@ -2,7 +2,7 @@
     "priority": 1,
     "request": {
         "method": "GET",
-        "urlPattern": "/social-security\\?cpf=12345678900"
+        "urlPattern": "/social-security\\?cpf=77777777777"
     },
     "response": {
         "status": 200,

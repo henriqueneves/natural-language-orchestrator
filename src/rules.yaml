@@ -1,7 +1,0 @@
-credit_analysis: |
-    - Verifique se a idade do pretendente é maior ou igual a 18 anos. Se não for, rejeite a proposta.
-    - Some a idade do pretendente com o número de anos do financiamento. Se o resultado for maior ou igual a 75, rejeite a proposta.
-    - Consulte o score de crédito por meio de um provedor externo. Se o score for menor que 500, rejeite a proposta.
-    - Verifique o comprometimento de renda: se o valor da parcela for superior a 30% da renda, rejeite a proposta.
-    - Verifique se há restrições legais no CPF do pretendente por meio de consulta externa. Se houver, rejeite a proposta.
-    - Verifique se há óbito vinculado ao CPF do pretendente por meio de consulta externa. Se houver, rejeite a proposta.

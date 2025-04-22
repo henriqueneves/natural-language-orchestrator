@@ -5,7 +5,7 @@ describe('Integração - creditAnalysisAgent', () => {
 
   const testCases = [
     {
-      descricao: 'todos os dados são válidos',
+      descricao: 'todos os dados são válidos 1',
       input: {
         cpf: '11111111111',
         idade: 30,
@@ -80,7 +80,40 @@ describe('Integração - creditAnalysisAgent', () => {
         valorParcela: 1200
       },
       resultadoEsperado: 'rejeitado'
-    }
+    },
+    {
+      descricao: 'possui restrições no CPF, comprometimento de renda superior a 30% e idade menor do que 18 anos',
+      input: {
+        cpf: '33333333333',
+        idade: 17,
+        renda: 1000,
+        parcelas: 48,
+        valorParcela: 2000
+      },
+      resultadoEsperado: 'rejeitado'
+    },
+    {
+      descricao: 'todos os dados são válidos 2',
+      input: {
+        cpf: '11111111111',
+        idade: 18,
+        renda: 1500,
+        parcelas: 48,
+        valorParcela: 450
+      },
+      resultadoEsperado: 'aprovado'
+    },
+    {
+      descricao: 'todos os dados são válidos 3',
+      input: {
+        cpf: '12345678900',
+        idade: 60,
+        renda: 5000,
+        parcelas: 48,
+        valorParcela: 1499
+      },
+      resultadoEsperado: 'aprovado'
+    },
   ];
 
   afterEach(() => {

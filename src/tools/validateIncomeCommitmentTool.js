@@ -1,6 +1,5 @@
 import { tool } from "@langchain/core/tools";
 
-// Simulating a credit score API call. For example, in Brazil, you might use Serasa.
 export const validateIncomeCommitmentTool = tool(
   async ({ installment, income, maximumIncomeCommitment }) => {
     
