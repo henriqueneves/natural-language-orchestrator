@@ -69,7 +69,7 @@ Approval or rejection is decided based on strict adherence to these business rul
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/henriqueneves/natural-language-orchestrator.git
 
 # Install dependencies
 npm install
@@ -81,16 +81,8 @@ Add the config OPENAI_API_KEY in .env file
 docker-compose up
 
 # Run the project
-npm run start
+node .
 ```
-
-### Configuration
-You will need to set:
-- Your OpenAI API Key.
-- WireMock URLs for mocked external service endpoints.
-
-### Repository
-> 🔗 [Insert your GitHub repository link here]
 
 ---
 
@@ -105,15 +97,4 @@ You will need to set:
 ## Credits
 
 Developed by **Henrique Gracioli Neves**  
-Special thanks to **Bianca** and **Edna** for their support.
-
 Supervisor: **Lucas Guerreiro** (University of São Paulo – USP)
-
----
-
-## References
-(Full list of references available in the TCC document.)
-
----
-
-Would you also like me to generate a second, simpler README version in case you want one to serve as a quick-start for GitHub? 🚀
