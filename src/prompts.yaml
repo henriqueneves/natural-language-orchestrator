@@ -14,7 +14,7 @@ credit_analysis_imperative: |
   - "regrasAprovadas": array contendo as descrições de todas as regras cumpridas.
   - "regrasRejeitadas": array contendo as descrições de todas as regras não cumpridas.
 
-  Sempre validate todas as regras, mesmo quando alguma já tenha resultado na rejeição da proposta. 
+  Sempre valide todas as regras, mesmo quando alguma já tenha resultado na rejeição da proposta. 
   Classifique como "aprovado" somente se todas as regras forem cumpridas integralmente; caso contrário, classifique como "rejeitado".
   Sempre utilize uma ferramenta para qualquer operação numérica. Caso não exista uma ferramenta personalizada para o cálculo em questão, utilize a calculadora (Python tool).
   Reveja minuciosamente sua resposta antes de retorná-la, assegurando que todas as regras tenham sido corretamente aplicadas conforme instruído.

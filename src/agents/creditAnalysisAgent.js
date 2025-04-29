@@ -38,6 +38,5 @@ export async function creditAnalysisAgent(input) {
           });
     }
 
-    return JSON.parse(agentFinalState.messages[agentFinalState.messages.length - 1].content);;
-
+    return JSON.parse(agentFinalState.messages[agentFinalState.messages.length - 1].content);
 }
