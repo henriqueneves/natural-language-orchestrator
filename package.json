@@ -1,5 +1,5 @@
 {
-  "name": "credit-analysis-orchestrator",
+  "name": "natural-language-orchestrator",
   "version": "1.0.0",
   "description": "Using Langchain to orchestrate a credit analysis process flow using OpenAI.",
   "license": "ISC",
